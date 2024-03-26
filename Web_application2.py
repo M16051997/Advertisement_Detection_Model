@@ -7,7 +7,7 @@ import base64
 import fitz
 #os.chdir(r'D:\WebApplication_YOLO_AD_detectsystem\The Trail Image Folder')
 # Define a function to apply custom CSS
-pathimage = r"D:\WebApplication_YOLO_AD_detectsystem\BackgroundImage\rm314-adj-10.jpg"
+pathimage = "https://raw.githubusercontent.com/M16051997/Advertisement_Detection_Model/main/rm314-adj-10.jpg" 
 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
@@ -59,10 +59,6 @@ multi = """ Instructions:--
 3. The model will take at a time whole newspaper but it is recommended to upload single page or image. It is very useful for us to count and verify the published ads.
 
 4. The Model accuracy is around 80%. 
-
-5. To convert PDF to images and to get single pages use the Below website upload the news paper and download the single pages.
-
-            'http://172.17.4.69:8501'
 """
 st.markdown(multi)
 
@@ -105,8 +101,9 @@ def pdf_to_img(uploaded_file, img_path_prefix):
 # Function to perform object detection
 def perform_object_detection(image_path):
     # Load the YOLO model
-    model = YOLO(r"D:\ADS_Project_Deployment\Models\Detection Models\best31_1000_epochs.pt")
-
+    #model = YOLO(r"D:\ADS_Project_Deployment\Models\Detection Models\best31_1000_epochs.pt")
+    model_url = "https://github.com/M16051997/Advertisement_Detection_Model/raw/main/best31_1000_epochs.pt"
+    model = YOLO.from_pretrained(model_url)
     # Load and preprocess the image
     img = cv2.imread(image_path)
 
