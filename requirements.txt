@@ -1,7 +1,9 @@
+libgl1-mesa-glx
 ultralytics
 opencv-python
 streamlit
 PyMuPDF
+
 # cython
 # darknet
 
