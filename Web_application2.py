@@ -5,7 +5,7 @@ from PIL import Image
 from ultralytics import YOLO
 import base64
 import fitz
-os.chdir(r'D:\WebApplication_YOLO_AD_detectsystem\The Trail Image Folder')
+#os.chdir(r'D:\WebApplication_YOLO_AD_detectsystem\The Trail Image Folder')
 # Define a function to apply custom CSS
 pathimage = r"D:\WebApplication_YOLO_AD_detectsystem\BackgroundImage\rm314-adj-10.jpg"
 
